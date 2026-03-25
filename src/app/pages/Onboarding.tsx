@@ -13,6 +13,8 @@ import {
 } from "../components/ui/select";
 import { Label } from "../components/ui/label";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import logoImage from "figma:asset/893ab94157a5e8aeb045ea6015e29a915c555244.png";
+import logoImage2 from "figma:asset/8dd1b8c27d22f6e01a56a2db491bbd59f8bdff22.png";
 
 export function Onboarding() {
   const navigate = useNavigate();
@@ -82,25 +84,25 @@ export function Onboarding() {
     <div className="min-h-screen bg-[#F5F5F5] flex flex-col">
       {/* Content */}
       <div className="flex-1 px-6 pt-8 pb-24">
-        {/* Partner Logos */}
+        {/* Logo Placeholders */}
         <div className="flex items-center justify-between mb-8">
-          <ImageWithFallback
-            src="https://images.unsplash.com/photo-1763298448528-bcdbcd972aff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaHViJTIwaW5ub3ZhdGlvbiUyMGNlbnRlcnxlbnwxfHx8fDE3NzQzNTMzMDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Astana Hub"
-            className="h-12 w-auto object-contain"
-          />
-          <ImageWithFallback
-            src="https://images.unsplash.com/photo-1770210217380-d78a69acdc77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaSUyMGNvbXBhbnklMjBtb2Rlcm4lMjB0ZWNoJTIwbG9nb3xlbnwxfHx8fDE3NzQzNTMzMDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Alem.ai"
-            className="h-12 w-auto object-contain"
-          />
+          <div className="w-16 h-16 bg-white rounded-xl shadow-lg border border-gray-200 flex items-center justify-center hover:shadow-xl transition-shadow overflow-hidden">
+            <img src={logoImage} alt="Logo" className="w-full h-full object-cover" />
+          </div>
+          <div className="w-16 h-16 bg-white rounded-xl shadow-lg border border-gray-200 flex items-center justify-center hover:shadow-xl transition-shadow overflow-hidden">
+            <img
+              src={logoImage2}
+              alt="Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         {/* Title */}
-        <h1 className="text-[24px] font-bold text-[#1A1A1A] text-center mb-3 leading-snug px-4">Мультимодальная платформа микрозадач</h1>
+        <h1 className="text-[24px] font-bold text-[#1A1A1A] text-center mb-3 leading-snug px-4">Получи вознаграждение от NCSpeech</h1>
 
         {/* Subtitle */}
-        <p className="text-[16px] text-[#757575] text-center mb-8 leading-relaxed">Платформа создана для участия в alem.ai battle и демонстрации механики сбора данных для ИИ-моделей</p>
+        <p className="text-[16px] text-[#757575] text-center mb-8 leading-relaxed">После регистрации и выполнении нескольких простых микро-задач вас ожидает вознаграждение!</p>
 
         {/* Form */}
         <div className="space-y-5">

@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router";
+import { Auth } from "./pages/Auth";
 import { Onboarding } from "./pages/Onboarding";
 import { Consent } from "./pages/Consent";
 import { Dashboard } from "./pages/Dashboard";
@@ -13,7 +14,7 @@ import { Loader } from "./components/Loader";
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: Onboarding,
+    Component: Auth,
     HydrateFallback: Loader,
   },
   {

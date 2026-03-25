@@ -3,6 +3,8 @@ import { useNavigate } from "react-router";
 import { Button } from "../components/ui/button";
 import { Checkbox } from "../components/ui/checkbox";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import logoImage from "figma:asset/893ab94157a5e8aeb045ea6015e29a915c555244.png";
+import logoImage2 from "figma:asset/8dd1b8c27d22f6e01a56a2db491bbd59f8bdff22.png";
 
 export function Consent() {
   const navigate = useNavigate();
@@ -17,18 +19,15 @@ export function Consent() {
   return (
     <div className="min-h-screen bg-[#F5F5F5] flex flex-col">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 px-6 py-4 sticky top-0 z-10">
-        <div className="flex items-center justify-between mb-2">
-          <ImageWithFallback 
-            src="https://images.unsplash.com/photo-1763298448528-bcdbcd972aff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwaHViJTIwaW5ub3ZhdGlvbiUyMGNlbnRlcnxlbnwxfHx8fDE3NzQzNTMzMDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Astana Hub" 
-            className="h-10 w-auto object-contain"
-          />
-          <ImageWithFallback 
-            src="https://images.unsplash.com/photo-1770210217380-d78a69acdc77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhaSUyMGNvbXBhbnklMjBtb2Rlcm4lMjB0ZWNoJTIwbG9nb3xlbnwxfHx8fDE3NzQzNTMzMDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Alem.ai" 
-            className="h-10 w-auto object-contain"
-          />
+      <div className="bg-white border-b border-gray-200 px-6 py-4">
+        {/* Logo Placeholders */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="w-16 h-16 bg-white rounded-xl shadow-lg border border-gray-200 flex items-center justify-center hover:shadow-xl transition-shadow overflow-hidden">
+            <img src={logoImage} alt="Logo" className="w-full h-full object-cover" />
+          </div>
+          <div className="w-16 h-16 bg-white rounded-xl shadow-lg border border-gray-200 flex items-center justify-center hover:shadow-xl transition-shadow overflow-hidden">
+            <img src={logoImage2} alt="Logo" className="w-full h-full object-cover" />
+          </div>
         </div>
         <h1 className="text-[20px] font-bold text-[#1A1A1A] text-center">
           Согласие на запись голоса и условия
@@ -147,7 +146,7 @@ export function Consent() {
               <br />
               Деректер клиенттермен, серіктестермен және үшінші тарап ЖИ провайдерлерімен бөлісілуі мүмкін.
               <br />
-              Деректер бүкіл әлемде және уақыт шектеулерінсіз пайдаланылу�� мүмкін.
+              Деректер бүкіл әлемде және уақыт шектеулерінсіз пайдаланылу мүмкін.
             </p>
           </div>
 
@@ -239,7 +238,7 @@ export function Consent() {
             </p>
             <h2 className="font-semibold text-[#757575] mt-3">Шарттарды қабылдау</h2>
             <p className="text-[#757575]">
-              Нысанда "Иә, мен келісемін" таңдау арқылы сіз барлық шарттарды түсінетініңізді және қабылдайтыныңызды, ерікті түрде қатысатыныңызды, төлемнен кейін құқықтарды беретініңізды, талаптарға сәйкес келетініңізді және барлық берілген ақпарат шындық екенін растайсыз.
+              Нысанда "Иә, мен келісемін" таңдау арқылы сіз барлық шарттарды түсінетініңізді және қабылдайтыныңызды, ерікті түрде қатысатыныңызды, төлемнен кейін құқықтарды беретініңізды, талаптарға сәйкес келетініңізды және барлық берілген ақпарат шындық екенін растайсыз.
             </p>
           </div>
 

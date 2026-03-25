@@ -9,11 +9,6 @@ export function Dashboard() {
   const navigate = useNavigate();
   const { profile, tasks, setProfile, setUser, transactions } = useApp();
   const [activeTab, setActiveTab] = useState<string>("available");
-  
-  // Pagination state for each tab
-  const [visibleAvailable, setVisibleAvailable] = useState(5);
-  const [visiblePending, setVisiblePending] = useState(5);
-  const [visibleCompleted, setVisibleCompleted] = useState(5);
 
   const availableTasks = tasks.filter((task) => task.status === "available");
   const pendingTasks = tasks.filter((task) => task.status === "pending");
@@ -22,31 +17,6 @@ export function Dashboard() {
 
   // Only show truly available tasks, exclude redo tasks from the Available tab
   const allAvailableTasks = availableTasks;
-
-  // Auto-adjust visible count to always show 5 tasks when task status changes
-  useEffect(() => {
-    if (allAvailableTasks.length < visibleAvailable && allAvailableTasks.length >= 5) {
-      setVisibleAvailable(5);
-    } else if (allAvailableTasks.length < 5 && visibleAvailable > allAvailableTasks.length) {
-      setVisibleAvailable(allAvailableTasks.length);
-    }
-  }, [allAvailableTasks.length]);
-
-  useEffect(() => {
-    if (pendingTasks.length < visiblePending && pendingTasks.length >= 5) {
-      setVisiblePending(5);
-    } else if (pendingTasks.length < 5 && visiblePending > pendingTasks.length) {
-      setVisiblePending(pendingTasks.length);
-    }
-  }, [pendingTasks.length]);
-
-  useEffect(() => {
-    if (completedTasks.length < visibleCompleted && completedTasks.length >= 5) {
-      setVisibleCompleted(5);
-    } else if (completedTasks.length < 5 && visibleCompleted > completedTasks.length) {
-      setVisibleCompleted(completedTasks.length);
-    }
-  }, [completedTasks.length]);
 
   const handleReset = () => {
     setProfile(null);
@@ -238,23 +208,9 @@ export function Dashboard() {
             <div className="px-6 pt-6 space-y-3">
               {allAvailableTasks.length > 0 ? (
                 <>
-                  {/* Display visible tasks */}
-                  {allAvailableTasks.slice(0, visibleAvailable).map((task) => (
+                  {allAvailableTasks.map((task) => (
                     <TaskCard key={task.id} task={task} />
                   ))}
-
-                  {/* Load More Button */}
-                  {visibleAvailable < allAvailableTasks.length && (
-                    <div className="pt-4">
-                      <Button
-                        onClick={() => setVisibleAvailable(prev => Math.min(prev + 5, allAvailableTasks.length))}
-                        variant="outline"
-                        className="w-full h-12 text-[14px] font-semibold border-2 border-gray-300 hover:border-gray-700 hover:text-gray-700 transition-colors"
-                      >
-                        Загрузить еще ({allAvailableTasks.length - visibleAvailable} осталось)
-                      </Button>
-                    </div>
-                  )}
                 </>
               ) : (
                 <div className="text-center py-12">
@@ -269,22 +225,9 @@ export function Dashboard() {
             <div className="px-6 pt-6 space-y-3">
               {pendingTasks.length > 0 ? (
                 <>
-                  {pendingTasks.slice(0, visiblePending).map((task) => (
+                  {pendingTasks.map((task) => (
                     <TaskCard key={task.id} task={task} />
                   ))}
-
-                  {/* Load More Button */}
-                  {visiblePending < pendingTasks.length && (
-                    <div className="pt-4">
-                      <Button
-                        onClick={() => setVisiblePending(prev => Math.min(prev + 5, pendingTasks.length))}
-                        variant="outline"
-                        className="w-full h-12 text-[14px] font-semibold border-2 border-gray-300 hover:border-gray-700 hover:text-gray-700 transition-colors"
-                      >
-                        Загрузить еще ({pendingTasks.length - visiblePending} осталось)
-                      </Button>
-                    </div>
-                  )}
                 </>
               ) : (
                 <div className="text-center py-12">
@@ -299,22 +242,9 @@ export function Dashboard() {
             <div className="px-6 pt-6 space-y-3">
               {completedTasks.length > 0 ? (
                 <>
-                  {completedTasks.slice(0, visibleCompleted).map((task) => (
+                  {completedTasks.map((task) => (
                     <TaskCard key={task.id} task={task} />
                   ))}
-
-                  {/* Load More Button */}
-                  {visibleCompleted < completedTasks.length && (
-                    <div className="pt-4">
-                      <Button
-                        onClick={() => setVisibleCompleted(prev => Math.min(prev + 5, completedTasks.length))}
-                        variant="outline"
-                        className="w-full h-12 text-[14px] font-semibold border-2 border-gray-300 hover:border-gray-700 hover:text-gray-700 transition-colors"
-                      >
-                        Загрузить еще ({completedTasks.length - visibleCompleted} осталось)
-                      </Button>
-                    </div>
-                  )}
                 </>
               ) : (
                 <div className="text-center py-12">
