@@ -204,41 +204,17 @@ export function Onboarding() {
             </Select>
           </div>
 
-          {/* Ethnicity */}
-          <div className="space-y-2">
-            <Label htmlFor="ethnicity" className="text-[#1A1A1A]">
-              Есть ли у вашей речи заметный акцент, диалект или региональные особенности?
-            </Label>
-            <Select value={ethnicity} onValueChange={setEthnicity}>
-              <SelectTrigger
-                id="ethnicity"
-                className="h-14 bg-white border-gray-300"
-              >
-                <SelectValue placeholder="Выберите вариант" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="no-accent">Без заметных особенностей</SelectItem>
-                <SelectItem value="slight-accent">Небольшой региональный акцент</SelectItem>
-                <SelectItem value="strong-accent">Выраженный региональный акцент</SelectItem>
-                <SelectItem value="dialect">Диалект / местный вариант речи</SelectItem>
-                <SelectItem value="mixed">Смешанная речь</SelectItem>
-                <SelectItem value="unsure">Затрудняюсь ответить</SelectItem>
-                <SelectItem value="other">Другое</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
           {/* Occupation */}
           <div className="space-y-2">
             <Label htmlFor="occupation" className="text-[#1A1A1A]">
-              Род занятий
+              Ваша сфера деятельности
             </Label>
             <Select value={occupation} onValueChange={setOccupation}>
               <SelectTrigger
                 id="occupation"
                 className="h-14 bg-white border-gray-300"
               >
-                <SelectValue placeholder="Выберите род занятий" />
+                <SelectValue placeholder="Выберите сферу деятельности" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="healthcare">Здравоохранение</SelectItem>
@@ -255,6 +231,29 @@ export function Onboarding() {
                   В данный момент не работаю
                 </SelectItem>
                 <SelectItem value="other">Другое</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          {/* Ethnicity */}
+          <div className="space-y-2">
+            <Label htmlFor="ethnicity" className="text-[#1A1A1A]">
+              Сколько лет опыта работы в выбранной сфере деятельности?
+            </Label>
+            <Select value={ethnicity} onValueChange={setEthnicity}>
+              <SelectTrigger
+                id="ethnicity"
+                className="h-14 bg-white border-gray-300"
+              >
+                <SelectValue placeholder="Выберите вариант" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="less-than-1">Менее 1 года</SelectItem>
+                <SelectItem value="1-3">1-3 года</SelectItem>
+                <SelectItem value="3-5">3-5 лет</SelectItem>
+                <SelectItem value="5-10">5-10 лет</SelectItem>
+                <SelectItem value="more-than-10">Более 10 лет</SelectItem>
+                <SelectItem value="not-applicable">Не применимо</SelectItem>
               </SelectContent>
             </Select>
           </div>

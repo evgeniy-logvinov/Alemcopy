@@ -17,9 +17,12 @@ export function Terms() {
           </button>
           <div className="flex items-center gap-3">
             <FileText className="w-6 h-6 text-[#E63946]" />
-            <h1 className="text-[18px] font-bold text-[#1A1A1A]">
-              Terms of Service
-            </h1>
+            <div>
+              <h1 className="text-[18px] font-bold text-[#1A1A1A]">
+                Условия использования
+              </h1>
+              <p className="text-[12px] text-[#757575]">Пайдалану шарттары</p>
+            </div>
           </div>
         </div>
       </div>
@@ -29,131 +32,212 @@ export function Terms() {
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 space-y-6">
           {/* Last Updated */}
           <div className="text-[12px] text-[#757575]">
-            Last updated: March 2, 2026
+            Последнее обновление: 2 марта 2026 г. / Соңғы жаңарту: 2 наурыз 2026 ж.
           </div>
 
           {/* Introduction */}
           <section>
             <h2 className="text-[18px] font-bold text-[#1A1A1A] mb-3">
-              1. Introduction
+              1. Введение
             </h2>
+            <p className="text-[14px] text-[#1A1A1A] leading-relaxed mb-2">
+              Добро пожаловать на нашу платформу записи голоса и транскрибации. Получая доступ к нашим услугам или используя их, вы соглашаетесь соблюдать настоящие Условия использования. Пожалуйста, внимательно прочитайте их перед участием в любых заданиях.
+            </p>
+            <h3 className="text-[16px] font-semibold text-[#757575] mt-3 mb-2">
+              1. Кіріспе
+            </h3>
             <p className="text-[14px] text-[#757575] leading-relaxed">
-              Welcome to our voice recording and transcription platform. By accessing or using our services, you agree to be bound by these Terms of Service. Please read them carefully before participating in any tasks.
+              Дауыс жазу және транскрибация платформасына қош келдіңіз. Біздің қызметтерді пайдалану арқылы сіз осы Пайдалану шарттарын сақтауға келісесіз. Кез келген тапсырмаларға қатысудан бұрын оларды мұқият оқыңыз.
             </p>
           </section>
 
           {/* Eligibility */}
           <section>
             <h2 className="text-[18px] font-bold text-[#1A1A1A] mb-3">
-              2. Eligibility
+              2. Соответствие требованиям
             </h2>
+            <p className="text-[14px] text-[#1A1A1A] leading-relaxed mb-2">
+              Чтобы использовать нашу платформу, вы должны:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-[14px] text-[#1A1A1A] ml-4">
+              <li>Быть не младше 18 лет или достичь совершеннолетия в вашей юрисдикции</li>
+              <li>Обладать дееспособностью для заключения обязывающих соглашений</li>
+              <li>Предоставлять точную и полную регистрационную информацию</li>
+              <li>Обеспечивать безопасность учетных данных вашего аккаунта</li>
+            </ul>
+            <h3 className="text-[16px] font-semibold text-[#757575] mt-3 mb-2">
+              2. Талаптарға сәйкестік
+            </h3>
             <p className="text-[14px] text-[#757575] leading-relaxed mb-2">
-              To use our platform, you must:
+              Біздің платформаны пайдалану үшін сіз:
             </p>
             <ul className="list-disc list-inside space-y-2 text-[14px] text-[#757575] ml-4">
-              <li>Be at least 18 years old or the age of majority in your jurisdiction</li>
-              <li>Have the legal capacity to enter into binding agreements</li>
-              <li>Provide accurate and complete registration information</li>
-              <li>Maintain the security of your account credentials</li>
+              <li>18 жастан кем емес немесе өз юрисдикцияңызда кәмелетке толған болуыңыз керек</li>
+              <li>Міндетті келісімдер жасауға қабілеттілігіңіз болуы керек</li>
+              <li>Дәл және толық тіркеу ақпаратын беруіңіз керек</li>
+              <li>Аккаунт деректеріңіздің қауіпсіздігін қамтамасыз етуіңіз керек</li>
             </ul>
           </section>
 
           {/* User Responsibilities */}
           <section>
             <h2 className="text-[18px] font-bold text-[#1A1A1A] mb-3">
-              3. User Responsibilities
+              3. Обязанности пользователя
             </h2>
+            <p className="text-[14px] text-[#1A1A1A] leading-relaxed mb-2">
+              При выполнении заданий вы соглашаетесь:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-[14px] text-[#1A1A1A] ml-4">
+              <li>Предоставлять подлинные голосовые записи в тихой обстановке</li>
+              <li>Читать скрипты четко и в естественном темпе</li>
+              <li>Предоставлять точные транскрипции аудиоконтента</li>
+              <li>Не использовать искусственные голоса, изменители голоса или автоматизированные инструменты</li>
+              <li>Не отправлять материалы, защищенные авторским правом, без разрешения</li>
+              <li>Выполнять задания добросовестно, не пытаясь обмануть систему</li>
+            </ul>
+            <h3 className="text-[16px] font-semibold text-[#757575] mt-3 mb-2">
+              3. Пайдаланушы міндеттері
+            </h3>
             <p className="text-[14px] text-[#757575] leading-relaxed mb-2">
-              When completing tasks, you agree to:
+              Тапсырмаларды орындау кезінде сіз мынаған келісесіз:
             </p>
             <ul className="list-disc list-inside space-y-2 text-[14px] text-[#757575] ml-4">
-              <li>Provide genuine voice recordings in a quiet environment</li>
-              <li>Read scripts clearly and at a natural pace</li>
-              <li>Provide accurate transcriptions of audio content</li>
-              <li>Not use artificial voices, voice changers, or automated tools</li>
-              <li>Not submit copyrighted material without permission</li>
-              <li>Complete tasks in good faith without attempting to game the system</li>
+              <li>Тыныш ортада нақты дауыстық жазбаларды беру</li>
+              <li>Скрипттерді айқын және табиғи қарқынмен оқу</li>
+              <li>Аудио мазмұнның дәл транскрипцияларын беру</li>
+              <li>Жасанды дауыстарды, дауыс өзгерткіштерді немесе автоматтандырылған құралдарды пайдаланбау</li>
+              <li>Рұқсатсыз авторлық құқықпен қорғалған материалдарды жібермеу</li>
+              <li>Жүйені алдауға тырыспай, адал орындау</li>
             </ul>
           </section>
 
           {/* Quality Standards */}
           <section>
             <h2 className="text-[18px] font-bold text-[#1A1A1A] mb-3">
-              4. Quality Standards
+              4. Стандарты качества
             </h2>
+            <p className="text-[14px] text-[#1A1A1A] leading-relaxed mb-2">
+              Все материалы подлежат проверке качества. Мы оставляем за собой право отклонять материалы, не соответствующие нашим стандартам качества, включая записи с чрезмерным фоновым шумом, нечеткой речью или неточными транскрипциями. Отклоненные задания могут быть переназначены для исправления.
+            </p>
+            <h3 className="text-[16px] font-semibold text-[#757575] mt-3 mb-2">
+              4. Сапа стандарттары
+            </h3>
             <p className="text-[14px] text-[#757575] leading-relaxed">
-              All submissions are subject to quality review. We reserve the right to reject submissions that do not meet our quality standards, including recordings with excessive background noise, unclear speech, or inaccurate transcriptions. Rejected tasks may be reassigned for correction.
+              Барлық материалдар сапаны тексеруден өтеді. Біз сапа стандарттарымызға сәйкес келмейтін материалдарды қабылдамау құқығын өзімізде қалдырамыз, оның ішінде артық фондық шумен, анық емес сөйлеумен немесе дәл емес транскрипциялармен жазбалар. Қабылданбаған тапсырмалар түзету үшін қайта тағайындалуы мүмкін.
             </p>
           </section>
 
           {/* Points and Rewards */}
           <section>
             <h2 className="text-[18px] font-bold text-[#1A1A1A] mb-3">
-              5. Points and Rewards
+              5. Баллы и вознаграждения
             </h2>
+            <p className="text-[14px] text-[#1A1A1A] leading-relaxed mb-2">
+              Относительно баллов, заработанных на платформе:
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-[14px] text-[#1A1A1A] ml-4">
+              <li>Баллы начисляются только за одобренные задания</li>
+              <li>Баллы не имеют денежной стоимости до их обмена</li>
+              <li>Варианты обмена и минимальные пороги могут изменяться</li>
+              <li>Мы оставляем за собой право корректировать стоимость баллов</li>
+              <li>Баллы могут истечь после периода неактивности аккаунта</li>
+              <li>Мошенническая деятельность может привести к конфискации баллов</li>
+            </ul>
+            <h3 className="text-[16px] font-semibold text-[#757575] mt-3 mb-2">
+              5. Ұпайлар мен сыйақылар
+            </h3>
             <p className="text-[14px] text-[#757575] leading-relaxed mb-2">
-              Regarding points earned on the platform:
+              Платформада жиналған ұпайларға қатысты:
             </p>
             <ul className="list-disc list-inside space-y-2 text-[14px] text-[#757575] ml-4">
-              <li>Points are awarded only for approved tasks</li>
-              <li>Points have no cash value until redeemed</li>
-              <li>Redemption options and minimum thresholds may change</li>
-              <li>We reserve the right to adjust point values</li>
-              <li>Points may expire after a period of account inactivity</li>
-              <li>Fraudulent activity may result in point forfeiture</li>
+              <li>Ұпайлар тек бекітілген тапсырмалар үшін беріледі</li>
+              <li>Ұпайлардың айырбасталғанға дейін ақшалай құны жоқ</li>
+              <li>Айырбас нұсқалары мен ең төменгі шектеулер өзгеруі мүмкін</li>
+              <li>Біз ұпай құнын реттеу құқығын өзімізде қалдырамыз</li>
+              <li>Ұпайлар аккаунт белсенділігі жоқ кезеңнен кейін жарамсыз болуы мүмкін</li>
+              <li>Алаяқтық әрекет ұпайларды тәркілеуге әкелуі мүмкін</li>
             </ul>
           </section>
 
           {/* Data Usage */}
           <section>
             <h2 className="text-[18px] font-bold text-[#1A1A1A] mb-3">
-              6. Data Usage
+              6. Использование данных
             </h2>
+            <p className="text-[14px] text-[#1A1A1A] leading-relaxed mb-2">
+              Отправляя голосовые записи и транскрипции, вы предоставляете нам всемирную безвозмездную лицензию на использование, хранение, обработку и анализ ваших материалов с целью обучения моделей искусственного интеллекта и машинного обучения. Для получения дополнительной информации ознакомьтесь с нашей Политикой конфиденциальности.
+            </p>
+            <h3 className="text-[16px] font-semibold text-[#757575] mt-3 mb-2">
+              6. Деректерді пайдалану
+            </h3>
             <p className="text-[14px] text-[#757575] leading-relaxed">
-              By submitting voice recordings and transcriptions, you grant us a worldwide, royalty-free license to use, store, process, and analyze your submissions for the purpose of training artificial intelligence and machine learning models. For more details, please review our Privacy Policy.
+              Дауыстық жазбалар мен транскрипцияларды жіберу арқылы сіз бізге материалдарыңызды жасанды интеллект пен машиналық оқыту модельдерін үйрету мақсатында пайдалану, сақтау, өңдеу және талдау үшін жаһандық, ақысыз лицензия бересіз. Қосымша ақпарат алу үшін біздің Құпиялық саясатымен танысыңыз.
             </p>
           </section>
 
           {/* Account Termination */}
           <section>
             <h2 className="text-[18px] font-bold text-[#1A1A1A] mb-3">
-              7. Account Termination
+              7. Прекращение действия аккаунта
             </h2>
+            <p className="text-[14px] text-[#1A1A1A] leading-relaxed mb-2">
+              Мы оставляем за собой право приостановить или прекратить действие аккаунтов, которые нарушают эти условия, участвуют в мошеннической деятельности или злоупотребляют платформой. Вы также можете в любое время запросить удаление аккаунта через страницу Настроек.
+            </p>
+            <h3 className="text-[16px] font-semibold text-[#757575] mt-3 mb-2">
+              7. Аккаунтты тоқтату
+            </h3>
             <p className="text-[14px] text-[#757575] leading-relaxed">
-              We reserve the right to suspend or terminate accounts that violate these terms, engage in fraudulent activity, or abuse the platform. You may also request account deletion at any time through the Settings page.
+              Біз осы шарттарды бұзатын, алаяқтық әрекеттерге қатысатын немесе платформаны теріс пайдаланатын аккаунттарды тоқтата тұру немесе жабу құқығын өзімізде қалдырамыз. Сондай-ақ, сіз кез келген уақытта Баптаулар бетінен аккаунтты жоюды сұрай аласыз.
             </p>
           </section>
 
           {/* Limitation of Liability */}
           <section>
             <h2 className="text-[18px] font-bold text-[#1A1A1A] mb-3">
-              8. Limitation of Liability
+              8. Ограничение ответственности
             </h2>
+            <p className="text-[14px] text-[#1A1A1A] leading-relaxed mb-2">
+              Платформа предоставляется «как есть» без каких-либо гарантий. Мы не несем ответственности за любые косвенные, случайные или последующие убытки, возникающие в результате использования вами сервиса.
+            </p>
+            <h3 className="text-[16px] font-semibold text-[#757575] mt-3 mb-2">
+              8. Жауапкершілікті шектеу
+            </h3>
             <p className="text-[14px] text-[#757575] leading-relaxed">
-              The platform is provided "as is" without warranties of any kind. We are not liable for any indirect, incidental, or consequential damages arising from your use of the service.
+              Платформа ешқандай кепілдіксіз «бар күйінде» ұсынылады. Біз сіздің қызметті пайдалану нәтижесінде туындайтын кез келген жанама, кездейсоқ немесе одан туындайтын залал үшін жауапты емеспіз.
             </p>
           </section>
 
           {/* Changes to Terms */}
           <section>
             <h2 className="text-[18px] font-bold text-[#1A1A1A] mb-3">
-              9. Changes to Terms
+              9. Изменения в Условиях
             </h2>
+            <p className="text-[14px] text-[#1A1A1A] leading-relaxed mb-2">
+              Мы можем время от времени обновлять настоящие Условия использования. Продолжение использования платформы после внесения изменений означает принятие новых условий. Мы будем уведомлять пользователей о значительных изменениях по электронной почте или через уведомления платформы.
+            </p>
+            <h3 className="text-[16px] font-semibold text-[#757575] mt-3 mb-2">
+              9. Шарттарға өзгерістер
+            </h3>
             <p className="text-[14px] text-[#757575] leading-relaxed">
-              We may update these Terms of Service from time to time. Continued use of the platform after changes constitutes acceptance of the new terms. We will notify users of significant changes via email or platform notifications.
+              Біз осы Пайдалану шарттарын уақыт өте келе жаңарта аламыз. Өзгерістер енгізілгеннен кейін платформаны пайдалануды жалғастыру жаңа шарттарды қабылдау дегенді білдіреді. Біз маңызды өзгерістер туралы пайдаланушыларды электрондық пошта немесе платформа хабарландырулары арқылы хабардар етеміз.
             </p>
           </section>
 
           {/* Contact */}
           <section>
             <h2 className="text-[18px] font-bold text-[#1A1A1A] mb-3">
-              10. Contact Information
+              10. Контактная информация
             </h2>
+            <p className="text-[14px] text-[#1A1A1A] leading-relaxed mb-2">
+              Если у вас есть вопросы об этих Условиях использования, пожалуйста, свяжитесь с нами по адресу{" "}
+              <a href="mailto:support@platform.kz" className="text-[#E63946] hover:underline">support@ncspeech.org</a>
+            </p>
+            <h3 className="text-[16px] font-semibold text-[#757575] mt-3 mb-2">
+              10. Байланыс ақпараты
+            </h3>
             <p className="text-[14px] text-[#757575] leading-relaxed">
-              If you have questions about these Terms of Service, please contact us at{" "}
-              <a href="mailto:support@example.com" className="text-[#E63946] hover:underline">
-                support@example.com
-              </a>
+              Егер осы Пайдалану шарттары туралы сұрақтарыңыз болса, бізге хабарласыңыз{" "}
+              <a href="mailto:support@platform.kz" className="text-[#E63946] hover:underline">support@ncspeech.org</a>
             </p>
           </section>
         </div>
